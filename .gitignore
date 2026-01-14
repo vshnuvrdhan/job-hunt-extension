@@ -1,0 +1,18 @@
+# ========================
+# Backend
+# ========================
+backend/node_modules/
+backend/.env
+
+# ========================
+# Chrome Extension build output
+# ========================
+sidebar/
+sidebar/assets/
+sidebar/index.html
+
+# ========================
+# OS / Editor junk
+# ========================
+.DS_Store
+Thumbs.db
