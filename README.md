@@ -109,18 +109,38 @@ Sidebar opens automatically
 
 ### Project Structure:
 job-hunt-extension/
-│
-├── backend/                # Node.js backend
-│   ├── llm/                # Groq/OpenAI integrations
-│   ├── prompts/            # Prompt engineering logic
-│   ├── routes/             # API routes
-│   └── server.js
-│
-├── background/             # Service worker
-├── popup/                  # Popup UI
-├── sidebar-react/          # React source (Vite)
-├── sidebar/                # Built sidebar (generated)
-├── manifest.json           # Chrome extension config
+├── backend/ # Node.js backend
+│ ├── llm/ # Groq/OpenAI integrations
+│ │ ├── groq.js
+│ │ ├── index.js
+│ │ └── openai.js
+│ ├── prompts/ # Prompt engineering logic
+│ │ ├── followupPrompt.js
+│ │ └── replyPrompt.js
+│ ├── routes/ # API routes
+│ │ ├── followup.js
+│ │ └── generate.js
+│ ├── package.json
+│ └── server.js
+├── background/ # Service worker
+│ └── service-worker.js
+├── popup/ # Popup UI
+│ ├── popup.html
+│ ├── popup.css
+│ └── popup.js
+├── sidebar-react/ # React source (Vite)
+│ ├── index.html
+│ ├── package.json
+│ ├── vite.config.js
+│ └── src/
+│ ├── App.jsx
+│ ├── main.jsx
+│ ├── style.css
+│ └── components/
+│ ├── FollowUpForm.jsx
+│ └── ReplyForm.jsx
+├── sidebar/ # Built sidebar (generated)
+├── manifest.json # Chrome extension config
 └── .gitignore
 
 
